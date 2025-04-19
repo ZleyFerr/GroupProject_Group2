@@ -6,57 +6,57 @@ void Quadrangle<Template>::set_sides()
 {
 	while (side1 <= 0 || side2 <= 0 || side3 <= 0 || side4 <= 0)
 	{
-		//ââîä 1 ñòîğîíû
-		std::cout << "Ââåäèòå 1 ñòîğîíó: ";
+		//Ğ²Ğ²Ğ¾Ğ´ 1 ÑÑ‚Ğ¾Ñ€Ğ¾Ğ½Ñ‹
+		std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 1 ÑÑ‚Ğ¾Ñ€Ğ¾Ğ½Ñƒ: ";
 		std::cin >> side1;
 		if (std::cin.fail())
 		{
 			std::cin.clear();
 			std::cin.ignore();
-			std::cout << "Ââîäèòå ÷èñëî.\n ";
+			std::cout << "Ğ’Ğ²Ğ¾Ğ´Ğ¸Ñ‚Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾.\n ";
 		}
 		else
 		{
-			if (side1 <= 0) std::cout << "Ñòîğîíà 1 äîëæíà áûòü áîëüøå 0." << "\n";
+			if (side1 <= 0) std::cout << "Ğ¡Ñ‚Ğ¾Ñ€Ğ¾Ğ½Ğ° 1 Ğ´Ğ¾Ğ»Ğ¶Ğ½Ğ° Ğ±Ñ‹Ñ‚ÑŒ Ğ±Ğ¾Ğ»ÑŒÑˆĞµ 0." << "\n";
 		}
-		//ââîä 2 ñòîğîíû
-		if(side1 > 0) std::cout << "Ââåäèòå 2 ñòîğîíó: ";
+		//Ğ²Ğ²Ğ¾Ğ´ 2 ÑÑ‚Ğ¾Ñ€Ğ¾Ğ½Ñ‹
+		if(side1 > 0) std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 2 ÑÑ‚Ğ¾Ñ€Ğ¾Ğ½Ñƒ: ";
 		std::cin >> side2;
 		if (std::cin.fail())
 		{
 			std::cin.clear();
 			std::cin.ignore();
-			std::cout << "Ââîäèòå ÷èñëî.\n ";
+			std::cout << "Ğ’Ğ²Ğ¾Ğ´Ğ¸Ñ‚Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾.\n ";
 		}
 		else
 		{
-			if (side2 <= 0) std::cout << "Ñòîğîíà 2 äîëæíà áûòü áîëüøå 0." << "\n";
+			if (side2 <= 0) std::cout << "Ğ¡Ñ‚Ğ¾Ñ€Ğ¾Ğ½Ğ° 2 Ğ´Ğ¾Ğ»Ğ¶Ğ½Ğ° Ğ±Ñ‹Ñ‚ÑŒ Ğ±Ğ¾Ğ»ÑŒÑˆĞµ 0." << "\n";
 		}
-		//ââîä 3 ñòîğîíû
-		if (side2 > 0 && side1 > 0) std::cout << "Ââåäèòå 3 ñòîğîíó: ";
+		//Ğ²Ğ²Ğ¾Ğ´ 3 ÑÑ‚Ğ¾Ñ€Ğ¾Ğ½Ñ‹
+		if (side2 > 0 && side1 > 0) std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 3 ÑÑ‚Ğ¾Ñ€Ğ¾Ğ½Ñƒ: ";
 		std::cin >> side3;
 		if (std::cin.fail())
 		{
 			std::cin.clear();
 			std::cin.ignore();
-			std::cout << "Ââîäèòå ÷èñëî.\n ";
+			std::cout << "Ğ’Ğ²Ğ¾Ğ´Ğ¸Ñ‚Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾.\n ";
 		}
 		else
 		{
-			if (side3 <= 0) std::cout << "Ñòîğîíà 3 äîëæíà áûòü áîëüøå 0." << "\n";
+			if (side3 <= 0) std::cout << "Ğ¡Ñ‚Ğ¾Ñ€Ğ¾Ğ½Ğ° 3 Ğ´Ğ¾Ğ»Ğ¶Ğ½Ğ° Ğ±Ñ‹Ñ‚ÑŒ Ğ±Ğ¾Ğ»ÑŒÑˆĞµ 0." << "\n";
 		}
-		//ââîä 4 ñòîğîíû
-		if (side3 > 0 && side2 > 0 && side1 > 0) std::cout << "Ââåäèòå 4 ñòîğîíó: ";
+		//Ğ²Ğ²Ğ¾Ğ´ 4 ÑÑ‚Ğ¾Ñ€Ğ¾Ğ½Ñ‹
+		if (side3 > 0 && side2 > 0 && side1 > 0) std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ 4 ÑÑ‚Ğ¾Ñ€Ğ¾Ğ½Ñƒ: ";
 		std::cin >> side4;
 		if (std::cin.fail())
 		{
 			std::cin.clear();
 			std::cin.ignore();
-			std::cout << "Ââîäèòå ÷èñëî.\n ";
+			std::cout << "Ğ’Ğ²Ğ¾Ğ´Ğ¸Ñ‚Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾.\n ";
 		}
 		else
 		{
-			if (side4 <= 0) std::cout << "Ñòîğîíà 4 äîëæíà áûòü áîëüøå 0." << "\n";
+			if (side4 <= 0) std::cout << "Ğ¡Ñ‚Ğ¾Ñ€Ğ¾Ğ½Ğ° 4 Ğ´Ğ¾Ğ»Ğ¶Ğ½Ğ° Ğ±Ñ‹Ñ‚ÑŒ Ğ±Ğ¾Ğ»ÑŒÑˆĞµ 0." << "\n";
 		}
 	}
 }
@@ -88,7 +88,7 @@ Template Quadrangle<Template>::get_side4()
 template<class Template>
 void Quadrangle<Template>::show()
 {
-	std::cout << "Ñòîğîíà 1: " << side1 << "\n" << "Ñòîğîíà 2: " << side2 << "\n" << "Ñòîğîíà 3: " << side3 << "\n" << "Ñòîğîíà 4: " << side4 << "\n";
+	std::cout << "Ğ¡Ñ‚Ğ¾Ñ€Ğ¾Ğ½Ğ° 1: " << side1 << "\n" << "Ğ¡Ñ‚Ğ¾Ñ€Ğ¾Ğ½Ğ° 2: " << side2 << "\n" << "Ğ¡Ñ‚Ğ¾Ñ€Ğ¾Ğ½Ğ° 3: " << side3 << "\n" << "Ğ¡Ñ‚Ğ¾Ñ€Ğ¾Ğ½Ğ° 4: " << side4 << "\n";
 }
 
 template<class custom_type>
@@ -97,9 +97,9 @@ void Quadrangle<custom_type>::change_sides()
 	std::string operation_str = "J";
 	while (int(operation_str[0]) < 48 || int(operation_str[0]) > 52 || operation_str.length() != 1)
 	{
-		std::cout << "Êàêóş ñòîğîíó âû õîòèòå èçìåíèòü? [0-4] ( 0 - íå èçìåíÿòü ) : ";
+		std::cout << "ĞšĞ°ĞºÑƒÑ ÑÑ‚Ğ¾Ñ€Ğ¾Ğ½Ñƒ Ğ²Ñ‹ Ñ…Ğ¾Ñ‚Ğ¸Ñ‚Ğµ Ğ¸Ğ·Ğ¼ĞµĞ½Ğ¸Ñ‚ÑŒ? [0-4] ( 0 - Ğ½Ğµ Ğ¸Ğ·Ğ¼ĞµĞ½ÑÑ‚ÑŒ ) : ";
 		std::cin >> operation_str;
-		if (int(operation_str[0]) < 48 || int(operation_str[0]) > 52 || operation_str.length() != 1) std::cout << "Ââåäèòå êîğğåêòíîå ÷èñëî.\n";
+		if (int(operation_str[0]) < 48 || int(operation_str[0]) > 52 || operation_str.length() != 1) std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ ĞºĞ¾Ñ€Ñ€ĞµĞºÑ‚Ğ½Ğ¾Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾.\n";
 	}
 	int operation;
 	if (int(operation_str[0]) == 52) operation = 4;
@@ -110,73 +110,73 @@ void Quadrangle<custom_type>::change_sides()
 	switch (operation)
 	{
 	case 0:
-		std::cout << "Îòìåíà èçìåíåíèÿ ñòîğîí.\n";
+		std::cout << "ĞÑ‚Ğ¼ĞµĞ½Ğ° Ğ¸Ğ·Ğ¼ĞµĞ½ĞµĞ½Ğ¸Ñ ÑÑ‚Ğ¾Ñ€Ğ¾Ğ½.\n";
 		break;
 	case 1:
 		do
 		{
-			std::cout << "Ââåäèòå íîâóş 1 ñòîğîíó: ";
+			std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ½Ğ¾Ğ²ÑƒÑ 1 ÑÑ‚Ğ¾Ñ€Ğ¾Ğ½Ñƒ: ";
 			std::cin >> side1;
 			if (std::cin.fail())
 			{
 				std::cin.clear();
 				std::cin.ignore();
-				std::cout << "Ââîäèòå ÷èñëî.\n ";
+				std::cout << "Ğ’Ğ²Ğ¾Ğ´Ğ¸Ñ‚Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾.\n ";
 			}
 			else 
 			{
-				if (side1 <= 0) std::cout << "Ñòîğîíà äîëæíà áûòü áîëüøå 0.\n";
+				if (side1 <= 0) std::cout << "Ğ¡Ñ‚Ğ¾Ñ€Ğ¾Ğ½Ğ° Ğ´Ğ¾Ğ»Ğ¶Ğ½Ğ° Ğ±Ñ‹Ñ‚ÑŒ Ğ±Ğ¾Ğ»ÑŒÑˆĞµ 0.\n";
 			}
 		} while (side1 <= 0);
 		break;
 	case 2:
 		do
 		{
-			std::cout << "Ââåäèòå íîâóş 2 ñòîğîíó: ";
+			std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ½Ğ¾Ğ²ÑƒÑ 2 ÑÑ‚Ğ¾Ñ€Ğ¾Ğ½Ñƒ: ";
 			std::cin >> side2;
 			if (std::cin.fail())
 			{
 				std::cin.clear();
 				std::cin.ignore();
-				std::cout << "Ââîäèòå ÷èñëî.\n ";
+				std::cout << "Ğ’Ğ²Ğ¾Ğ´Ğ¸Ñ‚Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾.\n ";
 			}
 			else
 			{
-				if (side2 <= 0) std::cout << "Ñòîğîíà äîëæíà áûòü áîëüøå 0.\n";
+				if (side2 <= 0) std::cout << "Ğ¡Ñ‚Ğ¾Ñ€Ğ¾Ğ½Ğ° Ğ´Ğ¾Ğ»Ğ¶Ğ½Ğ° Ğ±Ñ‹Ñ‚ÑŒ Ğ±Ğ¾Ğ»ÑŒÑˆĞµ 0.\n";
 			}
 		} while (side2 <= 0);
 		break;
 	case 3:
 		do
 		{
-			std::cout << "Ââåäèòå íîâóş 3 ñòîğîíó: ";
+			std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ½Ğ¾Ğ²ÑƒÑ 3 ÑÑ‚Ğ¾Ñ€Ğ¾Ğ½Ñƒ: ";
 			std::cin >> side3;
 			if (std::cin.fail())
 			{
 				std::cin.clear();
 				std::cin.ignore();
-				std::cout << "Ââîäèòå ÷èñëî.\n ";
+				std::cout << "Ğ’Ğ²Ğ¾Ğ´Ğ¸Ñ‚Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾.\n ";
 			}
 			else
 			{
-				if (side3 <= 0) std::cout << "Ñòîğîíà äîëæíà áûòü áîëüøå 0.\n";
+				if (side3 <= 0) std::cout << "Ğ¡Ñ‚Ğ¾Ñ€Ğ¾Ğ½Ğ° Ğ´Ğ¾Ğ»Ğ¶Ğ½Ğ° Ğ±Ñ‹Ñ‚ÑŒ Ğ±Ğ¾Ğ»ÑŒÑˆĞµ 0.\n";
 			}
 		} while (side3 <= 0);
 		break;
 	case 4:
 		do
 		{
-			std::cout << "Ââåäèòå íîâóş 4 ñòîğîíó: ";
+			std::cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ½Ğ¾Ğ²ÑƒÑ 4 ÑÑ‚Ğ¾Ñ€Ğ¾Ğ½Ñƒ: ";
 			std::cin >> side4;
 			if (std::cin.fail())
 			{
 				std::cin.clear();
 				std::cin.ignore();
-				std::cout << "Ââîäèòå ÷èñëî.\n ";
+				std::cout << "Ğ’Ğ²Ğ¾Ğ´Ğ¸Ñ‚Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾.\n ";
 			}
 			else
 			{
-				if (side4 <= 0) std::cout << "Ñòîğîíà äîëæíà áûòü áîëüøå 0.\n";
+				if (side4 <= 0) std::cout << "Ğ¡Ñ‚Ğ¾Ñ€Ğ¾Ğ½Ğ° Ğ´Ğ¾Ğ»Ğ¶Ğ½Ğ° Ğ±Ñ‹Ñ‚ÑŒ Ğ±Ğ¾Ğ»ÑŒÑˆĞµ 0.\n";
 			}
 		} while (side4 <= 0);
 		break;
@@ -188,13 +188,13 @@ void Quadrangle<custom_type>::change_sides()
 template<class custom_type>
  custom_type Quadrangle<custom_type>::P_calculate()
 {
-	 std::cout << "P áàçîâûé[ïî óìîë÷àíèş]: " << P << "\n";
+	 std::cout << "P Ğ±Ğ°Ğ·Ğ¾Ğ²Ñ‹Ğ¹[Ğ¿Ğ¾ ÑƒĞ¼Ğ¾Ğ»Ñ‡Ğ°Ğ½Ğ¸Ñ]: " << P << "\n";
 	 return P;
 }
 
 template<class custom_type>
  custom_type Quadrangle<custom_type>::S_calculate()
 {
-	 std::cout << "S áàçîâûé[ïî óìîë÷àíèş]: " << S << "\n";
+	 std::cout << "S Ğ±Ğ°Ğ·Ğ¾Ğ²Ñ‹Ğ¹[Ğ¿Ğ¾ ÑƒĞ¼Ğ¾Ğ»Ñ‡Ğ°Ğ½Ğ¸Ñ]: " << S << "\n";
 	 return S;
 }
