@@ -1,5 +1,6 @@
 #pragma once
-template <class custom_type>
+
+template <typename custom_type>
 class Quadrangle
 {
 protected:
@@ -7,14 +8,11 @@ protected:
 	custom_type side2 = 0;
 	custom_type side3 = 0;
 	custom_type side4 = 0;
-	custom_type P = 0;
-	custom_type S = 0;
-
 public:
-	//Конструкторы и деструктор
-	Quadrangle(custom_type side1, custom_type side2, custom_type side3, custom_type side4) : side1(side1), side2(side2), side3(side3), side4(side4) {};
-	Quadrangle() {};
-	~Quadrangle() {};
+	
+	 Quadrangle(custom_type side1, custom_type side2, custom_type side3, custom_type side4) : side1(side1), side2(side2), side3(side3), side4(side4) {}; //Конструктор c параметрамия 
+	Quadrangle() {}; //Конструктор по умолчанию
+	virtual ~Quadrangle() {}; //деструктор
 
 	//Функция для становления сторон - изменяемая при наследовании
 	virtual void set_sides(); 
@@ -25,11 +23,18 @@ public:
 	custom_type get_side3();
 	custom_type get_side4();
 
+	//Функции для становления отдельных сторон
+	void set_side1();
+	void set_side2();
+	void set_side3();
+	void set_side4();
+
 	//Функция для вывода сторон в консоль.
 	void show();
 	void change_sides();
 
 	//Функции для подсчёта перимитра и площади - изменяемые при наследовании
-	virtual custom_type P_calculate();
-	virtual custom_type S_calculate();
+	virtual void P_calculate();
+	virtual void S_calculate();
 };
+
