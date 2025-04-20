@@ -31,18 +31,18 @@ inline void Romb_class<custom_type>::set_sides()
 	side_1 = 0;
 	while (side_1 <= 0)
 	{
-		//ââîä 1 ñòîðîíû
-		std::cout << "Ââåäèòå ñòîðîíó: ";
+		//Ð²Ð²Ð¾Ð´ 1 ÑÑ‚Ð¾Ñ€Ð¾Ð½Ñ‹
+		std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÑ‚Ð¾Ñ€Ð¾Ð½Ñƒ: ";
 		std::cin >> side_1;
 		if (std::cin.fail())
 		{
 			std::cin.clear();
 			std::cin.ignore();
-			std::cout << "Ââîäèòå ÷èñëî.\n ";
+			std::cout << "Ð’Ð²Ð¾Ð´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾.\n ";
 		}
 		else
 		{
-			if (side_1 <= 0) std::cout << "Ñòîðîíà 1 äîëæíà áûòü áîëüøå 0." << "\n";
+			if (side_1 <= 0) std::cout << "Ð¡Ñ‚Ð¾Ñ€Ð¾Ð½Ð° 1 Ð´Ð¾Ð»Ð¶Ð½Ð° Ð±Ñ‹Ñ‚ÑŒ Ð±Ð¾Ð»ÑŒÑˆÐµ 0." << "\n";
 		}
 		side_3 = side_1;
 		side_2 = side_1;
@@ -63,7 +63,7 @@ void Romb_class<custom_type>::P_calculate()
 	custom_type side_4 = Quadrangle<custom_type>::side4;
 	custom_type P = 0;
 	P = side_1 + side_2 + side_3 + side_4;
-	std::cout << "Ïåðèìåòð ðîìáà: " << P << "\n";
+	std::cout << "ÐŸÐµÑ€Ð¸Ð¼ÐµÑ‚Ñ€ Ñ€Ð¾Ð¼Ð±Ð°: " << P << "\n";
 }
 
 template<typename custom_type>
@@ -75,6 +75,6 @@ void Romb_class<custom_type>::S_calculate()
 	custom_type side_4 = Quadrangle<custom_type>::side4;
 	custom_type S = 0;
 	S = ((side_1*sqrt(2)) * (side_1 * sqrt(2))) / 2;
-	std::cout << "Ïëîùàäü ðîìáà: " << S << "\n";
+	std::cout << "ÐŸÐ»Ð¾Ñ‰Ð°Ð´ÑŒ Ñ€Ð¾Ð¼Ð±Ð°: " << S << "\n";
 }
 
