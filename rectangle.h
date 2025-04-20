@@ -38,30 +38,30 @@ inline void Rectangle_class<custom_type>::set_sides()
 	system("cls");
 	while (side_1 <= 0 || side_2 <= 0)
 	{
-		std::cout << "Ââåäèòå âûñîòó: ";
+		std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð²Ñ‹ÑÐ¾Ñ‚Ñƒ: ";
 		std::cin >> side_1;
 		if (std::cin.fail())
 		{
 			std::cin.clear();
 			std::cin.ignore();
-			std::cout << "Ââîäèòå ÷èñëî.\n ";
+			std::cout << "Ð’Ð²Ð¾Ð´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾.\n ";
 		}
 		else
 		{
-			if (side_1 <= 0) std::cout << "Ñòîðîíà 1 äîëæíà áûòü áîëüøå 0. ââåäèòå ëþáîå ÷èñëî è ïðîäîëæèòå" << "\n";
+			if (side_1 <= 0) std::cout << "Ð¡Ñ‚Ð¾Ñ€Ð¾Ð½Ð° 1 Ð´Ð¾Ð»Ð¶Ð½Ð° Ð±Ñ‹Ñ‚ÑŒ Ð±Ð¾Ð»ÑŒÑˆÐµ 0. Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð»ÑŽÐ±Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾ Ð¸ Ð¿Ñ€Ð¾Ð´Ð¾Ð»Ð¶Ð¸Ñ‚Ðµ" << "\n";
 		}
 
-		if (side_1 > 0) std::cout << "Ââåäèòå øèðèíó: ";
+		if (side_1 > 0) std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑˆÐ¸Ñ€Ð¸Ð½Ñƒ: ";
 		std::cin >> side_2;
 		if (std::cin.fail())
 		{
 			std::cin.clear();
 			std::cin.ignore();
-			std::cout << "Ââîäèòå ÷èñëî.\n ";
+			std::cout << "Ð’Ð²Ð¾Ð´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾.\n ";
 		}
 		else
 		{
-			if (side_2 <= 0) std::cout << "Ñòîðîíà 2 äîëæíà áûòü áîëüøå 0." << "\n";
+			if (side_2 <= 0) std::cout << "Ð¡Ñ‚Ð¾Ñ€Ð¾Ð½Ð° 2 Ð´Ð¾Ð»Ð¶Ð½Ð° Ð±Ñ‹Ñ‚ÑŒ Ð±Ð¾Ð»ÑŒÑˆÐµ 0." << "\n";
 		}
 
 		side_3 = side_1;
@@ -86,18 +86,18 @@ inline void Rectangle_class<custom_type>::set_side_1()
 	system("cls");
 	while (side_1 <= 0)
 	{
-		//ââîä 1 ñòîðîíû
-		std::cout << "Ââåäèòå âûñîòó: ";
+		//Ð²Ð²Ð¾Ð´ 1 ÑÑ‚Ð¾Ñ€Ð¾Ð½Ñ‹
+		std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð²Ñ‹ÑÐ¾Ñ‚Ñƒ: ";
 		std::cin >> side_1;
 		if (std::cin.fail())
 		{
 			std::cin.clear();
 			std::cin.ignore();
-			std::cout << "Ââîäèòå ÷èñëî.\n ";
+			std::cout << "Ð’Ð²Ð¾Ð´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾.\n ";
 		}
 		else
 		{
-			if (side_1 <= 0) std::cout << "Âûñîòà äîëæíà áûòü áîëüøå 0. " << "\n";
+			if (side_1 <= 0) std::cout << "Ð’Ñ‹ÑÐ¾Ñ‚Ð° Ð´Ð¾Ð»Ð¶Ð½Ð° Ð±Ñ‹Ñ‚ÑŒ Ð±Ð¾Ð»ÑŒÑˆÐµ 0. " << "\n";
 		}
 	}
 	side_3 = side_1;
@@ -120,18 +120,18 @@ inline void Rectangle_class<custom_type>::set_side_2()
 	system("cls");
 	while (side_2 <= 0)
 	{
-		//ââîä 2 ñòîðîíû
-		std::cout << "Ââåäèòå øèðèíó: ";
+		//Ð²Ð²Ð¾Ð´ 2 ÑÑ‚Ð¾Ñ€Ð¾Ð½Ñ‹
+		std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑˆÐ¸Ñ€Ð¸Ð½Ñƒ: ";
 		std::cin >> side_2;
 		if (std::cin.fail())
 		{
 			std::cin.clear();
 			std::cin.ignore();
-			std::cout << "Ââîäèòå ÷èñëî.\n ";
+			std::cout << "Ð’Ð²Ð¾Ð´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾.\n ";
 		}
 		else
 		{
-			if (side_1 <= 0) std::cout << "øèðèíà äîëæíà áûòü áîëüøå 0. " << "\n";
+			if (side_1 <= 0) std::cout << "ÑˆÐ¸Ñ€Ð¸Ð½Ð° Ð´Ð¾Ð»Ð¶Ð½Ð° Ð±Ñ‹Ñ‚ÑŒ Ð±Ð¾Ð»ÑŒÑˆÐµ 0. " << "\n";
 		}
 	}
 	side_4 = side_2;
@@ -150,7 +150,7 @@ void Rectangle_class<custom_type>::P_calculate()
 	custom_type side_4 = Quadrangle<custom_type>::side4;
 	custom_type P = 0;
 	P = side_1 + side_2 + side_3 + side_4;
-	std::cout << "Ïåðèìåòð ðàâíîáîêîé òðàïåöèè: " << P << "\n";
+	std::cout << "ÐŸÐµÑ€Ð¸Ð¼ÐµÑ‚Ñ€ Ñ€Ð°Ð²Ð½Ð¾Ð±Ð¾ÐºÐ¾Ð¹ Ñ‚Ñ€Ð°Ð¿ÐµÑ†Ð¸Ð¸: " << P << "\n";
 }
 
 template<typename custom_type>
@@ -162,7 +162,7 @@ void Rectangle_class<custom_type>::S_calculate()
 	 custom_type side_4 = Quadrangle<custom_type>::side4;
 	 custom_type S = 0;
 	 S = side_1 * side_3;
-	 std::cout << "Ïëîùàäü ðàâíîáîêîé òðàïåöèè: " << S << "\n";
+	 std::cout << "ÐŸÐ»Ð¾Ñ‰Ð°Ð´ÑŒ Ñ€Ð°Ð²Ð½Ð¾Ð±Ð¾ÐºÐ¾Ð¹ Ñ‚Ñ€Ð°Ð¿ÐµÑ†Ð¸Ð¸: " << S << "\n";
 }
 
 template<typename custom_type>
@@ -173,5 +173,5 @@ void Rectangle_class<custom_type>::R_calculate()
 	custom_type side_3 = Quadrangle<custom_type>::side3;
 	custom_type side_4 = Quadrangle<custom_type>::side4;
 	custom_type R = sqrt(side_1*side_1 + side_2*side_2)/2;
-	std::cout << "Ðàäèóñ îïèñàííîé îêðóæíîñòè ïðÿìîóãîëüíèêà: " << R << "\n";
+	std::cout << "Ð Ð°Ð´Ð¸ÑƒÑ Ð¾Ð¿Ð¸ÑÐ°Ð½Ð½Ð¾Ð¹ Ð¾ÐºÑ€ÑƒÐ¶Ð½Ð¾ÑÑ‚Ð¸ Ð¿Ñ€ÑÐ¼Ð¾ÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸ÐºÐ°: " << R << "\n";
 }
