@@ -36,43 +36,43 @@ inline void Trapez_class<custom_type>::set_sides()
 	side_4 = 0;
 	while (side_1 <= 0 || side_2 <= 0 || side_3 <= 0 || side_2 >= side_1)
 	{
-		std::cout << "Ââåäèòå 1 ñòîðîíó - áîëüøåå îñíîâàíèå : ";
+		std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ 1 ÑÑ‚Ð¾Ñ€Ð¾Ð½Ñƒ - Ð±Ð¾Ð»ÑŒÑˆÐµÐµ Ð¾ÑÐ½Ð¾Ð²Ð°Ð½Ð¸Ðµ : ";
 		std::cin >> side_1;
 		if (std::cin.fail())
 		{
 			std::cin.clear();
 			std::cin.ignore();
-			std::cout << "Ââîäèòå ÷èñëî.\n ";
+			std::cout << "Ð’Ð²Ð¾Ð´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾.\n ";
 		}
 		else
 		{
-			if (side_1 <= 0) std::cout << "Ñòîðîíà 1 äîëæíà áûòü áîëüøå 0." << "\n";
+			if (side_1 <= 0) std::cout << "Ð¡Ñ‚Ð¾Ñ€Ð¾Ð½Ð° 1 Ð´Ð¾Ð»Ð¶Ð½Ð° Ð±Ñ‹Ñ‚ÑŒ Ð±Ð¾Ð»ÑŒÑˆÐµ 0." << "\n";
 		}
 
-		if (side_1 > 0) std::cout << "Ââåäèòå 2 ñòîðîíó - ìåíüøåå îñíîâàíèå: ";
+		if (side_1 > 0) std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ 2 ÑÑ‚Ð¾Ñ€Ð¾Ð½Ñƒ - Ð¼ÐµÐ½ÑŒÑˆÐµÐµ Ð¾ÑÐ½Ð¾Ð²Ð°Ð½Ð¸Ðµ: ";
 		std::cin >> side_2;
 		if (std::cin.fail())
 		{
 			std::cin.clear();
 			std::cin.ignore();
-			std::cout << "Ââîäèòå ÷èñëî.\n ";
+			std::cout << "Ð’Ð²Ð¾Ð´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾.\n ";
 		}
 		else
 		{
-			if (side_2 <= 0) std::cout << "Ñòîðîíà 2 äîëæíà áûòü áîëüøå 0." << "\n";
+			if (side_2 <= 0) std::cout << "Ð¡Ñ‚Ð¾Ñ€Ð¾Ð½Ð° 2 Ð´Ð¾Ð»Ð¶Ð½Ð° Ð±Ñ‹Ñ‚ÑŒ Ð±Ð¾Ð»ÑŒÑˆÐµ 0." << "\n";
 		}
 
-		if (side_1 > 0 && side_2 > 0) std::cout << "Ââåäèòå áîêîâóþ ñòîðîíó: ";
+		if (side_1 > 0 && side_2 > 0) std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð±Ð¾ÐºÐ¾Ð²ÑƒÑŽ ÑÑ‚Ð¾Ñ€Ð¾Ð½Ñƒ: ";
 		std::cin >> side_3;
 		if (std::cin.fail())
 		{
 			std::cin.clear();
 			std::cin.ignore();
-			std::cout << "Ââîäèòå ÷èñëî.\n ";
+			std::cout << "Ð’Ð²Ð¾Ð´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾.\n ";
 		}
 		else
 		{
-			if (side_3 <= 0) std::cout << "Áîêîâàÿ ñòîðîíà äîëæíà áûòü áîëüøå 0." << "\n";
+			if (side_3 <= 0) std::cout << "Ð‘Ð¾ÐºÐ¾Ð²Ð°Ñ ÑÑ‚Ð¾Ñ€Ð¾Ð½Ð° Ð´Ð¾Ð»Ð¶Ð½Ð° Ð±Ñ‹Ñ‚ÑŒ Ð±Ð¾Ð»ÑŒÑˆÐµ 0." << "\n";
 		}
 		side_4 = side_3;
 		Quadrangle<custom_type>::side4 = side_4;
@@ -91,7 +91,7 @@ void Trapez_class<custom_type>::P_calculate()
 	custom_type side_4 = Quadrangle<custom_type>::side4;
 	custom_type P = 0;
 	P = side_1 + side_2 + side_3 + side_4;
-	std::cout << "Ïåðèìåòð ðàâíîáîêîé òðàïåöèè: " << P << "\n"; 
+	std::cout << "ÐŸÐµÑ€Ð¸Ð¼ÐµÑ‚Ñ€ Ñ€Ð°Ð²Ð½Ð¾Ð±Ð¾ÐºÐ¾Ð¹ Ñ‚Ñ€Ð°Ð¿ÐµÑ†Ð¸Ð¸: " << P << "\n"; 
 }
 
 template<typename custom_type>
@@ -105,7 +105,7 @@ void Trapez_class<custom_type>::S_calculate()
 	custom_type h = 0;
 	h = std::sqrt(std::pow(side_3, 2) - std::pow((side_2 - side_1) / 2, 2));
 	S = ((side_1 + side_2) / 2) * h;
-	std::cout << "Ïëîùàäü ðàâíîáîêîé òðàïåöèè: " << S << "\n";
+	std::cout << "ÐŸÐ»Ð¾Ñ‰Ð°Ð´ÑŒ Ñ€Ð°Ð²Ð½Ð¾Ð±Ð¾ÐºÐ¾Ð¹ Ñ‚Ñ€Ð°Ð¿ÐµÑ†Ð¸Ð¸: " << S << "\n";
 }
 
 template<typename custom_type>
@@ -117,8 +117,8 @@ void Trapez_class<custom_type>::ugol_calculate()
 	custom_type side_4 = Quadrangle<custom_type>::side4;
 	custom_type UR = std::acos((side_2 - side_1) / (2 * side_3));
 	custom_type U = UR * 180.0 / 3.1415;
-	std::cout << "Óãîë ïðè îñíîâàíèè ðàâíîáîêîé òðàïåöèè: " << U << "\n";
-	if (U < 0) { std::cout << "òàêîé ðàâíîáîêîé òðàïåöèè íå ñóùåñâóåò èëè óãîë ñëèøêîì ìàë.\n"; }
+	std::cout << "Ð£Ð³Ð¾Ð» Ð¿Ñ€Ð¸ Ð¾ÑÐ½Ð¾Ð²Ð°Ð½Ð¸Ð¸ Ñ€Ð°Ð²Ð½Ð¾Ð±Ð¾ÐºÐ¾Ð¹ Ñ‚Ñ€Ð°Ð¿ÐµÑ†Ð¸Ð¸: " << U << "\n";
+	if (U < 0) { std::cout << "Ñ‚Ð°ÐºÐ¾Ð¹ Ñ€Ð°Ð²Ð½Ð¾Ð±Ð¾ÐºÐ¾Ð¹ Ñ‚Ñ€Ð°Ð¿ÐµÑ†Ð¸Ð¸ Ð½Ðµ ÑÑƒÑ‰ÐµÑÐ²ÑƒÐµÑ‚ Ð¸Ð»Ð¸ ÑƒÐ³Ð¾Ð» ÑÐ»Ð¸ÑˆÐºÐ¾Ð¼ Ð¼Ð°Ð».\n"; }
 }
 
 template<typename custom_type>
@@ -133,18 +133,18 @@ inline void Trapez_class<custom_type>::set_side__1()
 	system("cls");
 	while (side_1 <= 0 || side_1 <= side_2)
 	{
-		//ââîä 1 ñòîðîíû
-		std::cout << "Ââåäèòå áîëüøåå îñíîâàíèå: ";
+		//Ð²Ð²Ð¾Ð´ 1 ÑÑ‚Ð¾Ñ€Ð¾Ð½Ñ‹
+		std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð±Ð¾Ð»ÑŒÑˆÐµÐµ Ð¾ÑÐ½Ð¾Ð²Ð°Ð½Ð¸Ðµ: ";
 		std::cin >> side_1;
 		if (std::cin.fail())
 		{
 			std::cin.clear();
 			std::cin.ignore();
-			std::cout << "Ââîäèòå ÷èñëî.\n ";
+			std::cout << "Ð’Ð²Ð¾Ð´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾.\n ";
 		}
 		else
 		{
-			if (side_1 <= 0) std::cout << "áîëüøå 0 è áîëüøå ìåíüøåãî îñíîâàíèÿ. " << "\n";
+			if (side_1 <= 0) std::cout << "Ð±Ð¾Ð»ÑŒÑˆÐµ 0 Ð¸ Ð±Ð¾Ð»ÑŒÑˆÐµ Ð¼ÐµÐ½ÑŒÑˆÐµÐ³Ð¾ Ð¾ÑÐ½Ð¾Ð²Ð°Ð½Ð¸Ñ. " << "\n";
 		}
 	}
 	Quadrangle<custom_type>::side4 = side_4;
@@ -165,18 +165,18 @@ inline void Trapez_class<custom_type>::set_side__2()
 	system("cls");
 	while (side_2 <= 0)
 	{
-		//ââîä 2 ñòîðîíû
-		std::cout << "Ââåäèòå ìåíüøåå îñíîâàíèå: ";
+		//Ð²Ð²Ð¾Ð´ 2 ÑÑ‚Ð¾Ñ€Ð¾Ð½Ñ‹
+		std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¼ÐµÐ½ÑŒÑˆÐµÐµ Ð¾ÑÐ½Ð¾Ð²Ð°Ð½Ð¸Ðµ: ";
 		std::cin >> side_2;
 		if (std::cin.fail())
 		{
 			std::cin.clear();
 			std::cin.ignore();
-			std::cout << "Ââîäèòå ÷èñëî.\n ";
+			std::cout << "Ð’Ð²Ð¾Ð´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾.\n ";
 		}
 		else
 		{
-			if (side_1 <= 0) std::cout << "áîëüøå 0. " << "\n";
+			if (side_1 <= 0) std::cout << "Ð±Ð¾Ð»ÑŒÑˆÐµ 0. " << "\n";
 		}
 	}
 	Quadrangle<custom_type>::side4 = side_4;
@@ -198,18 +198,18 @@ inline void Trapez_class<custom_type>::set_side__3()
 	system("cls");
 	while (side_3 <= 0)
 	{
-		//ââîä 3-4 ñòîðîíû
-		std::cout << "Ââåäèòå áîêîâóþ ñòîðîíó: ";
+		//Ð²Ð²Ð¾Ð´ 3-4 ÑÑ‚Ð¾Ñ€Ð¾Ð½Ñ‹
+		std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð±Ð¾ÐºÐ¾Ð²ÑƒÑŽ ÑÑ‚Ð¾Ñ€Ð¾Ð½Ñƒ: ";
 		std::cin >> side_3;
 		if (std::cin.fail())
 		{
 			std::cin.clear();
 			std::cin.ignore();
-			std::cout << "Ââîäèòå ÷èñëî.\n ";
+			std::cout << "Ð’Ð²Ð¾Ð´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾.\n ";
 		}
 		else
 		{
-			if (side_3 <= 0) std::cout << "áîëüøå 0. " << "\n";
+			if (side_3 <= 0) std::cout << "Ð±Ð¾Ð»ÑŒÑˆÐµ 0. " << "\n";
 		}
 	}
 	side_4 = side_3;
