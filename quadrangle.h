@@ -1,4 +1,5 @@
 #pragma once
+#include <algorithm>
 
 template <typename custom_type>
 class Quadrangle
@@ -36,5 +37,8 @@ public:
 	//Функции для подсчёта перимитра и площади - изменяемые при наследовании
 	virtual void P_calculate();
 	virtual void S_calculate();
+
+	//функция для проверки существования четырёхугольника
+	bool check_quad();
 };
 
