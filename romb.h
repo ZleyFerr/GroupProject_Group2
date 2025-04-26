@@ -77,7 +77,7 @@ void Romb_class<custom_type>::set_angle()
 		}
 		else
 		{
-			if (side_1 <= 0) std::cout << "угол быть больше 0 и меньше 180." << "\n";
+			if (side_1 <= 0) std::cout << "угол должен быть больше 0 и меньше 180." << "\n";
 		}
 		side_3 = side_1;
 		side_2 = side_1;
