@@ -12,10 +12,10 @@
 int menu()
 {
     srand(time(NULL));
-    double a = rand() % 10 + 6;
-    double b = rand() % 4 + 1;
-    double c = rand() % 10 + 1;
-    double d = rand() % 10 + 1;
+    double a = 4;
+    double b = 2;
+    double c = 2;
+    double d = 2;
 
 
     Quadrangle<double> quad(a, b, c, d);
@@ -373,7 +373,7 @@ int menu()
             break;
         case 5:
             choose_5 = 0;
-            while (choose_5 <= 0 || choose_5 > 4)
+            while (choose_5 <= 0 || choose_5 > 5)
             {
                 system("cls");
                 std::cout << "Выбранная фигура - ромб.\n";
@@ -381,8 +381,9 @@ int menu()
                     << "1. Изменить сторону\n"
                     << "2. Вывести текущие стороны на экран\n"
                     << "3. Вывести периметр\n"
-                    << "4. Вывести площадь\n";
-                std::cout << "Введите число от 1 до 4: ";
+                    << "4. Вывести площадь\n"
+                    << "5. Ввести угол\n";
+                std::cout << "Введите число от 1 до 5: ";
                 std::cin >> choose_5;
                 if (std::cin.fail())
                 {
@@ -392,7 +393,7 @@ int menu()
                 }
                 else
                 {
-                    if (choose_5 <= 0 || choose_5 > 4) std::cout << "Выбор в этом меню от 1 до 4.\n";
+                    if (choose_5 <= 0 || choose_5 > 5) std::cout << "Выбор в этом меню от 1 до 5.\n";
                 }
 
                 switch (choose_5)
@@ -412,6 +413,10 @@ int menu()
                 case 4:
                     std::cout << "Выбран вывод площади.\n";
                     romb1.S_calculate();
+                    break;
+                case 5:
+                    std::cout << "Выбрано измнение угла.\n";
+                    romb1.set_angle();
                     break;
                 default:
                     std::cout << "Неккоректный ввод.\n";
