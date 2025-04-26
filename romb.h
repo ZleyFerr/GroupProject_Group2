@@ -4,6 +4,8 @@
 template <typename custom_type>
 class Romb_class : public Quadrangle<custom_type>
 {
+private:
+	custom_type angle = 30;
 public:
 	~Romb_class() override {};
 	Romb_class() {};
@@ -15,7 +17,7 @@ public:
 		this->side4 = side4;
 	}
 	void set_sides() override;
-
+	void set_angle();
 	void P_calculate() override;
 	void S_calculate() override;
 };
@@ -55,6 +57,38 @@ inline void Romb_class<custom_type>::set_sides()
 }
 
 template<typename custom_type>
+void Romb_class<custom_type>::set_angle()
+{
+	custom_type side_1 = Quadrangle<custom_type>::side1;
+	custom_type side_2 = Quadrangle<custom_type>::side2;
+	custom_type side_3 = Quadrangle<custom_type>::side3;
+	custom_type side_4 = Quadrangle<custom_type>::side4;
+	angle = 0;
+	while (angle <= 0 || angle >= 180)
+	{
+		//ввод угла
+		std::cout << "Введите угол: ";
+		std::cin >> angle;
+		if (std::cin.fail())
+		{
+			std::cin.clear();
+			std::cin.ignore();
+			std::cout << "Вводите число.\n ";
+		}
+		else
+		{
+			if (side_1 <= 0) std::cout << "угол быть больше 0 и меньше 180." << "\n";
+		}
+		side_3 = side_1;
+		side_2 = side_1;
+		side_4 = side_1;
+		Quadrangle<custom_type>::side4 = side_4;
+		Quadrangle<custom_type>::side3 = side_3;
+		Quadrangle<custom_type>::side2 = side_2;
+	}
+}
+
+template<typename custom_type>
 void Romb_class<custom_type>::P_calculate()
 {
 	custom_type side_1 = Quadrangle<custom_type>::side1;
@@ -74,7 +108,8 @@ void Romb_class<custom_type>::S_calculate()
 	custom_type side_3 = Quadrangle<custom_type>::side3;
 	custom_type side_4 = Quadrangle<custom_type>::side4;
 	custom_type S = 0;
-	S = ((side_1*sqrt(2)) * (side_1 * sqrt(2))) / 2;
+	double angle_rad = angle * 3.1415 / 180.0;
+	S = side_1 * side_1 * sin(angle_rad);
 	std::cout << "Площадь ромба: " << S << "\n";
 }
 
