@@ -34,7 +34,7 @@ inline void Trapez_class<custom_type>::set_sides()
 	side_2 = 0;
 	side_3 = 0;
 	side_4 = 0;
-	while (side_1 <= 0 || side_2 <= 0 || side_3 <= 0 || side_2 >= side_1)
+	while (side_1 <= 0 || side_2 <= 0 || side_3 <= 0 || side_2 >= side_1 || !((side_1 < (side_2 + side_3 + side_4)) && (side_2 < (side_1 + side_3 + side_4)) && (side_3 < (side_1 + side_2 + side_4)) && (side_4 < (side_1 + side_2 + side_3))))
 	{
 		std::cout << "Введите 1 сторону - большее основание : ";
 		std::cin >> side_1;
@@ -131,7 +131,7 @@ inline void Trapez_class<custom_type>::set_side__1()
 	side_1 = 0;
 
 	system("cls");
-	while (side_1 <= 0 || side_1 <= side_2)
+	while (side_1 <= 0 || side_2 <= 0 || side_3 <= 0 || side_2 >= side_1 || !((side_1 < (side_2 + side_3 + side_4)) && (side_2 < (side_1 + side_3 + side_4)) && (side_3 < (side_1 + side_2 + side_4)) && (side_4 < (side_1 + side_2 + side_3))))
 	{
 		//ввод 1 стороны
 		std::cout << "Введите большее основание: ";
@@ -163,7 +163,7 @@ inline void Trapez_class<custom_type>::set_side__2()
 	side_2 = 0;
 
 	system("cls");
-	while (side_2 <= 0)
+	while (side_1 <= 0 || side_2 <= 0 || side_3 <= 0 || side_2 >= side_1 || !((side_1 < (side_2 + side_3 + side_4)) && (side_2 < (side_1 + side_3 + side_4)) && (side_3 < (side_1 + side_2 + side_4)) && (side_4 < (side_1 + side_2 + side_3))))
 	{
 		//ввод 2 стороны
 		std::cout << "Введите меньшее основание: ";
@@ -196,7 +196,7 @@ inline void Trapez_class<custom_type>::set_side__3()
 	side_4 = 0;
 
 	system("cls");
-	while (side_3 <= 0)
+	while (side_1 <= 0 || side_2 <= 0 || side_3 <= 0 || side_2 >= side_1 || !((side_1 < (side_2 + side_3 + side_4)) && (side_2 < (side_1 + side_3 + side_4)) && (side_3 < (side_1 + side_2 + side_4)) && (side_4 < (side_1 + side_2 + side_3))))
 	{
 		//ввод 3-4 стороны
 		std::cout << "Введите боковую сторону: ";
