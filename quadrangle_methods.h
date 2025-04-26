@@ -8,7 +8,7 @@ void Quadrangle<Template>::set_sides()
 	side2 = 0;
 	side3 = 0;
 	side4 = 0;
-	while (side1 <= 0 || side2 <= 0 || side3 <= 0 || side4 <= 0)
+	while (side1 <= 0 || side2 <= 0 || side3 <= 0 || side4 <= 0 || !check_quad())
 	{
 		//ввод 1 стороны
 		std::cout << "Введите 1 сторону: ";
@@ -94,7 +94,7 @@ template<typename custom_type>
 {
 	 system("cls");
 	 side1 = 0;
-	 while (side1 <= 0)
+	 while (side1 <= 0 || !check_quad)
 	 {
 		 //ввод 1 стороны
 		 std::cout << "Введите 1 сторону: ";
@@ -117,7 +117,7 @@ template<typename custom_type>
  {
 	 side2 = 0;
 	 system("cls");
-	 while (side2 <= 0)
+	 while (side2 <= 0 || !check_quad())
 	 {
 		 //ввод 2 стороны
 		 std::cout << "Введите 2 сторону: ";
@@ -140,7 +140,7 @@ template<typename custom_type>
  {
 	 side3 = 0;
 	 system("cls");
-	 while (side3 <= 0)
+	 while (side3 <= 0 || !check_quad())
 	 {
 		 //ввод 3 стороны
 		 std::cout << "Введите 3 сторону: ";
@@ -163,7 +163,7 @@ template<typename custom_type>
  {
 	 side4 = 0;
 	 system("cls");
-	 while (side4 <= 0)
+	 while (side4 <= 0 || !check_quad())
 	 {
 		 //ввод 4 стороны
 		 std::cout << "Введите 4 сторону: ";
@@ -291,4 +291,13 @@ template<typename custom_type>
 void Quadrangle<custom_type>::S_calculate()
 {
 	 std::cout << "Площадь четырёхугольника: " << "Невозможно найти. Выберетие другую фигуру." << "\n";
+}
+
+template<typename custom_type>
+bool Quadrangle<custom_type>::check_quad()
+{
+	std::vector<custom_type> sides = { side1,side2,side3,side4 };
+	std::sort(sides.begin(), sides.end());
+	if (sides[0] + sides[1] + sides[2] <= sides[3]) return 0;
+	return 1;
 }
