@@ -161,8 +161,8 @@ void Rectangle_class<custom_type>::S_calculate()
 	 custom_type side_3 = Quadrangle<custom_type>::side3;
 	 custom_type side_4 = Quadrangle<custom_type>::side4;
 	 custom_type S = 0;
-	 S = side_1 * side_3;
-	 std::cout << "Площадь равнобокой трапеции: " << S << "\n";
+	 S = side_1 * side_2;
+	 std::cout << "Площадь прямоугольника: " << S << "\n";
 }
 
 template<typename custom_type>
