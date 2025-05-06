@@ -5,14 +5,13 @@ template <typename custom_type>
 class Quadrangle
 {
 protected:
-	custom_type side1 = 0;
-	custom_type side2 = 0;
-	custom_type side3 = 0;
-	custom_type side4 = 0;
+	custom_type side1 = 4;
+	custom_type side2 = 2;
+	custom_type side3 = 2;
+	custom_type side4 = 2;
 public:
-	
+	Quadrangle() {};
 	 Quadrangle(custom_type side1, custom_type side2, custom_type side3, custom_type side4) : side1(side1), side2(side2), side3(side3), side4(side4) {}; //Конструктор c параметрамия 
-	Quadrangle() {}; //Конструктор по умолчанию
 	virtual ~Quadrangle() {}; //деструктор
 
 	//Функция для становления сторон - изменяемая при наследовании
