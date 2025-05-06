@@ -147,7 +147,7 @@ void Rectangle_class<custom_type>::P_calculate()
 	custom_type side_3 = Quadrangle<custom_type>::side3;
 	custom_type side_4 = Quadrangle<custom_type>::side4;
 	custom_type P = 0;
-	P = side_1 + side_2 + side_3 + side_4;
+	P = (side_1 + side_2)*2;
 	std::cout << "Периметр прямоугольника: " << P << "\n";
 }
 
