@@ -5,8 +5,6 @@ template <typename custom_type>
 class Trapez_class : public Quadrangle<custom_type>
 {
 public:
-	~Trapez_class() override {};
-	Trapez_class() {};
 	Trapez_class(custom_type side1, custom_type side2, custom_type side3, custom_type side4)
 	{
 		this->side1 = side1;
@@ -34,7 +32,7 @@ inline void Trapez_class<custom_type>::set_sides()
 	side_2 = 0;
 	side_3 = 0;
 	side_4 = 0;
-	while (side_1 <= 0 || side_2 <= 0 || side_3 <= 0 || side_2 >= side_1 || !((side_1 < (side_2 + side_3 + side_4)) && (side_2 < (side_1 + side_3 + side_4)) && (side_3 < (side_1 + side_2 + side_4)) && (side_4 < (side_1 + side_2 + side_3))))
+	while (side_1 <= 0 || side_2 <= 0 || side_3 <= 0 || side_2 > side_1 || !((side_1 < (side_2 + side_3 + side_4)) && (side_2 < (side_1 + side_3 + side_4)) && (side_3 < (side_1 + side_2 + side_4)) && (side_4 < (side_1 + side_2 + side_3))))
 	{
 		std::cout << "Введите 1 сторону - большее основание : ";
 		std::cin >> side_1;
@@ -90,7 +88,7 @@ void Trapez_class<custom_type>::P_calculate()
 	custom_type side_3 = Quadrangle<custom_type>::side3;
 	custom_type side_4 = Quadrangle<custom_type>::side4;
 	custom_type P = 0;
-	P = side_1 + side_2 + side_3 + side_4;
+	P = side_1 + side_2 + (side_3*2);
 	std::cout << "Периметр равнобокой трапеции: " << P << "\n"; 
 }
 
@@ -131,7 +129,7 @@ inline void Trapez_class<custom_type>::set_side__1()
 	side_1 = 0;
 
 	system("cls");
-	while (side_1 <= 0 || side_2 <= 0 || side_3 <= 0 || side_2 >= side_1 || !((side_1 < (side_2 + side_3 + side_4)) && (side_2 < (side_1 + side_3 + side_4)) && (side_3 < (side_1 + side_2 + side_4)) && (side_4 < (side_1 + side_2 + side_3))))
+	while (side_1 <= 0 || side_2 <= 0 || side_3 <= 0 || side_2 > side_1 || !((side_1 < (side_2 + side_3 + side_4)) && (side_2 < (side_1 + side_3 + side_4)) && (side_3 < (side_1 + side_2 + side_4)) && (side_4 < (side_1 + side_2 + side_3))))
 	{
 		//ввод 1 стороны
 		std::cout << "Введите большее основание: ";
