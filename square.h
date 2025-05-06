@@ -5,17 +5,21 @@ template <typename custom_type>
 class Square_class : public Quadrangle<custom_type>
 {
 public:
-	~Square_class() override {};
-	Square_class() {};
-	Square_class(custom_type side1, custom_type side2, custom_type side3, custom_type side4)
+	Square_class()
+	{ 
+		this->side1 = 100;
+		this->side2 = Quadrangle<custom_type>::side1;
+		this->side3 = Quadrangle<custom_type>::side1;
+		this->side4 = Quadrangle<custom_type>::side1;
+	}
+	Square_class(custom_type side1)
 	{
 		this->side1 = side1;
-		this->side2 = side2;
-		this->side3 = side3;
-		this->side4 = side4;
+		this->side2 = side1;
+		this->side3 = side1;
+		this->side4 = side1;
 	}
 	void set_sides() override;
-
 	void P_calculate() override;
 	void S_calculate() override;
 	void R_calculate();
@@ -64,7 +68,7 @@ void Square_class<custom_type>::P_calculate()
 	custom_type side_3 = Quadrangle<custom_type>::side3;
 	custom_type side_4 = Quadrangle<custom_type>::side4;
 	custom_type P = 0;
-	P = side_1 + side_2 + side_3 + side_4;
+	P = 4*side_1;
 	std::cout << "Периметр квадрата: " << P << "\n";
 }
 
