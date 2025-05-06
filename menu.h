@@ -19,8 +19,8 @@ int menu()
 
 
     Quadrangle<double> quad(a, b, c, d);
-    Rectangle_class <double> rect1(a, b, a, b);
-    Square_class <double> square1(a, a, a, a);
+    Rectangle_class <double> rect1;
+    Square_class <double> square1;
     Trapez_class <double> trapez1(a, b, c, c);
     Romb_class <double> romb1(a, a, a, a);
 
@@ -373,7 +373,7 @@ int menu()
             break;
         case 5:
             choose_5 = 0;
-            while (choose_5 <= 0 || choose_5 > 5)
+            while (choose_5 <= 0 || choose_5 > 6)
             {
                 system("cls");
                 std::cout << "Выбранная фигура - ромб.\n";
@@ -382,8 +382,9 @@ int menu()
                     << "2. Вывести текущие стороны на экран\n"
                     << "3. Вывести периметр\n"
                     << "4. Вывести площадь\n"
-                    << "5. Ввести угол\n";
-                std::cout << "Введите число от 1 до 5: ";
+                    << "5. Ввести угол\n"
+                    << "6. Вывести угол\n";
+                std::cout << "Введите число от 1 до 6: ";
                 std::cin >> choose_5;
                 if (std::cin.fail())
                 {
@@ -393,7 +394,7 @@ int menu()
                 }
                 else
                 {
-                    if (choose_5 <= 0 || choose_5 > 5) std::cout << "Выбор в этом меню от 1 до 5.\n";
+                    if (choose_5 <= 0 || choose_5 > 6) std::cout << "Выбор в этом меню от 1 до 6.\n";
                 }
 
                 switch (choose_5)
@@ -417,6 +418,10 @@ int menu()
                 case 5:
                     std::cout << "Выбрано измнение угла.\n";
                     romb1.set_angle();
+                    break;
+                case 6:
+                    std::cout << "Выбран вывод угла.\n";
+                    romb1.show_angle();
                     break;
                 default:
                     std::cout << "Неккоректный ввод.\n";
