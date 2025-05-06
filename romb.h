@@ -7,8 +7,6 @@ class Romb_class : public Quadrangle<custom_type>
 private:
 	custom_type angle = 30;
 public:
-	~Romb_class() override {};
-	Romb_class() {};
 	Romb_class(custom_type side1, custom_type side2, custom_type side3, custom_type side4)
 	{
 		this->side1 = side1;
@@ -20,6 +18,7 @@ public:
 	void set_angle();
 	void P_calculate() override;
 	void S_calculate() override;
+	void show_angle();
 };
 
 template<typename custom_type>
@@ -96,7 +95,7 @@ void Romb_class<custom_type>::P_calculate()
 	custom_type side_3 = Quadrangle<custom_type>::side3;
 	custom_type side_4 = Quadrangle<custom_type>::side4;
 	custom_type P = 0;
-	P = side_1 + side_2 + side_3 + side_4;
+	P = side_1 *4;
 	std::cout << "Периметр ромба: " << P << "\n";
 }
 
@@ -111,5 +110,15 @@ void Romb_class<custom_type>::S_calculate()
 	double angle_rad = angle * 3.1415 / 180.0;
 	S = side_1 * side_1 * sin(angle_rad);
 	std::cout << "Площадь ромба: " << S << "\n";
+}
+
+template<typename custom_type>
+void Romb_class<custom_type>::show_angle()
+{
+	custom_type side_1 = Quadrangle<custom_type>::side1;
+	custom_type side_2 = Quadrangle<custom_type>::side2;
+	custom_type side_3 = Quadrangle<custom_type>::side3;
+	custom_type side_4 = Quadrangle<custom_type>::side4;
+	std::cout << "угол: " << angle << "\n";
 }
 
