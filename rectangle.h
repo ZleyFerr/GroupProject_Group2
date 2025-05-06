@@ -5,9 +5,7 @@ template <typename custom_type>
 class Rectangle_class : public Quadrangle<custom_type>
 {
 public:
-	~Rectangle_class() override {};
-	Rectangle_class() {};
-	Rectangle_class(custom_type side1, custom_type side2, custom_type side3, custom_type side4)
+	Rectangle_class(custom_type side1 = 4, custom_type side2 = 2, custom_type side3 = 4, custom_type side4 = 2)
 	{
 		this->side1 = side1;
 		this->side2 = side2;
